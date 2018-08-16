@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="#a23b3c"
+    tools:context=".activity.MainActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg3" />
+    <TextView
+        android:id="@+id/tvNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Kiểm tra mạng..."
+        android:layout_marginBottom="40dp"
+        android:textColor="#ffffff" />
+    <TextView
+        android:id="@+id/tvTryAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Thử lại"/>
+    <ProgressBar
+        android:id="@+id/pbNetwork"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_gravity="center"/>
+</LinearLayout>

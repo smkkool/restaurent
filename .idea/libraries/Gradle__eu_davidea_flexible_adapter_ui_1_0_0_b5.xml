@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: eu.davidea:flexible-adapter-ui-1.0.0-b5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/flexible-adapter-ui-1.0.0-b5.aar/afff82b880daaf9608f8d14986299b39/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/flexible-adapter-ui-1.0.0-b5.aar/afff82b880daaf9608f8d14986299b39/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/eu.davidea/flexible-adapter-ui/1.0.0-b5/50ad4fcd23577aaba7c5aca69c5a1197ef92085e/flexible-adapter-ui-1.0.0-b5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

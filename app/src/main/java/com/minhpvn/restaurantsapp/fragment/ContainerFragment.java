@@ -1,0 +1,143 @@
+package com.minhpvn.restaurantsapp.fragment;
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.minhpvn.restaurantsapp.BaseFragment;
+import com.minhpvn.restaurantsapp.R;
+import com.minhpvn.restaurantsapp.ultil.MyViewPager;
+import com.minhpvn.restaurantsapp.ultil.Toolbox;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class ContainerFragment extends Fragment {
+    @BindView(R.id.bottomNavigation) BottomNavigationView bottomNavigation;
+    @BindView(R.id.viewPager) MyViewPager viewPager;
+
+    private HomeFragment homeFragment;
+    private DeliveryFragment deliveryFragment;
+    private RestaurentFragment restaurentFragment;
+    private AccountFragment accountFragment;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_container, container, false);
+        ButterKnife.bind(this, view);
+
+        setupViewPager();
+        setupBottomBar();
+        return view;
+    }
+
+    public MyViewPager getViewPager() {
+        return viewPager;
+    }
+    public BottomNavigationView getBottomNavigationView() {
+        return bottomNavigation;
+    }
+    private void setupViewPager() {
+        final FragmentStatePagerAdapter pagerAdapter = new FragmentStatePagerAdapter(getActivity().getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                return getItemFragmentViewPager(position);
+            }
+
+            @Override
+            public int getCount() {
+                return 4;
+            }
+
+        };
+        viewPager.setOffscreenPageLimit(4);
+        viewPager.setAdapter(pagerAdapter);
+        bottomNavigation.setSelectedItemId(R.id.menu_newfeed);
+        viewPager.setCurrentItem(0, false);
+        viewPager.setPagingEnabled(false);
+        Toolbox.disableShiftMode(bottomNavigation);
+
+    }
+
+    private Fragment getItemFragmentViewPager(int position) {
+        Fragment f;
+        switch (position) {
+            case 0:
+                if (homeFragment == null) {
+                    homeFragment = new HomeFragment();
+//                        homeFragment.setArguments(data);
+                }
+                f = homeFragment;
+                break;
+            case 1:
+                if (deliveryFragment == null)
+                    deliveryFragment = new DeliveryFragment();
+                f = deliveryFragment;
+                break;
+            case 2:
+                if (restaurentFragment == null)
+                    restaurentFragment = new RestaurentFragment();
+                f = restaurentFragment;
+                break;
+            case 3:
+                if (accountFragment == null)
+                    accountFragment = new AccountFragment();
+                f = accountFragment;
+                break;
+            default:
+                if (homeFragment == null)
+                    homeFragment = new HomeFragment();
+                f = homeFragment;
+                break;
+        }
+        return f;
+    }
+
+    private void setupBottomBar() {
+        bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.menu_newfeed:
+                        viewPager.setCurrentItem(0, false);
+                        break;
+                    case R.id.menu_delivery:
+                        viewPager.setCurrentItem(1, false);
+                        break;
+                    case R.id.menu_create_order:
+                        viewPager.setCurrentItem(2, false);
+                        break;
+                    case R.id.menu_setting:
+                        viewPager.setCurrentItem(3, false);
+                        break;
+                    default:
+                        viewPager.setCurrentItem(0, false);
+                        break;
+                }
+                return true;
+            }
+        });
+    }
+
+    public void startView(Fragment fragment) {
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.fl_container, fragment).commitAllowingStateLoss();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+
+}
