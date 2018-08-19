@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:background="#a23b3c"
+    android:background="@drawable/bg_new_gradient"
     tools:context=".activity.MainActivity">
 
 
@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:layout_gravity="center"
-        android:background="@drawable/bg3" />
+        android:background="@drawable/bg3"
+        android:visibility="gone"/>
     <TextView
         android:id="@+id/tvNetwork"
         android:layout_width="match_parent"

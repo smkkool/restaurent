@@ -4,7 +4,7 @@
     <item
         android:id="@+id/menu_newfeed"
         android:icon="@drawable/ic_new"
-        android:title="News" />
+        android:title="Gần đây" />
     <item
         android:id="@+id/menu_delivery"
         android:icon="@drawable/ic_deli"
@@ -12,9 +12,9 @@
     <item
         android:id="@+id/menu_create_order"
         android:icon="@drawable/ic_loca"
-        android:title="Restaurent" />
+        android:title="Địa chỉ" />
     <item
         android:id="@+id/menu_setting"
         android:icon="@drawable/ic_location"
-        android:title="Setting" />
+        android:title="Cá nhân" />
 </menu>

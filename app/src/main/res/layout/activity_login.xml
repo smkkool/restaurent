@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fdfdfe"
+    android:background="@drawable/background_intro"
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
+
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:background="@drawable/imgtitle" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/intro1" />
+
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:visibility="gone" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tv_radio_setting_login"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/tvLoginPhoneNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+
+        android:background="@drawable/bg_button_new_gradient"
+        android:drawablePadding="14dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Login with Facebook"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/tvLoginPhoneNumber"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_button_new_gradient_two"
+        android:drawablePadding="14dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Login with mobile"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+</RelativeLayout>

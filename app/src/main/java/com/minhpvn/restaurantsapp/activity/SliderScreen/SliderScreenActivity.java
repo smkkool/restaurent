@@ -2,6 +2,7 @@ package com.minhpvn.restaurantsapp.activity.SliderScreen;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,12 +24,17 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.relex.circleindicator.CircleIndicator;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 public class SliderScreenActivity extends AppCompatActivity {
     @BindView(R.id.viewPagerSlider) ViewPager viewPagerSlider;
     @BindView(R.id.circleIndicator) CircleIndicator circleIndicator;
     @BindView(R.id.tvNext) TextView tvNext;
     @BindView(R.id.llFinish) LinearLayout llFinish;
     private SliderScreenAdapter sliderScreenAdapter;
+    private Handler handler = new Handler();
+    private Animation animationbbb, fadeIn, fadeOut;
+    ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +49,8 @@ public class SliderScreenActivity extends AppCompatActivity {
         this.setContentView(R.layout.screen_slider);
 
         ButterKnife.bind(this);
-
+        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
         if (PreferenceUtils.isStartApp(this)) {
 //            PreferenceUtils.saveStartApp(this);
             sliderScreenAdapter = new SliderScreenAdapter(this);
@@ -63,6 +72,7 @@ public class SliderScreenActivity extends AppCompatActivity {
                     int pageWidth = page.getWidth();
                     float pageWidthTimesPosition = pageWidth * position;
                     float absPosition = Math.abs(position);
+                    Log.d("absPosition", absPosition + "");
                     View title = page.findViewById(R.id.tvHeader);
                     View llBg = page.findViewById(R.id.llBg);
                     View description = page.findViewById(R.id.tvContent);
@@ -72,15 +82,11 @@ public class SliderScreenActivity extends AppCompatActivity {
                     if (position <= -1.0f || position >= 1.0f) {
                         // The page is not visible. This is a good place to stop
                         // any potential work / animations you may have running.
-                        title.clearAnimation();
-                        llBg.clearAnimation();
-                        description.clearAnimation();
-                        computer.clearAnimation();
+                        llBg.setAlpha(0.0F);
+                        llBg.setTranslationX(pageWidth * position);
                     } else if (position == 0.0f) {
-                        title.clearAnimation();
-                        llBg.clearAnimation();
-                        description.clearAnimation();
-                        computer.clearAnimation();
+                        llBg.setAlpha(1.0F);
+                        llBg.setTranslationX(pageWidth * position);
                         // The page is selected. This is a good time to reset Views
                         // after animations as you can't always count on the PageTransformer
                         // callbacks to match up perfectly.
@@ -92,14 +98,18 @@ public class SliderScreenActivity extends AppCompatActivity {
 
                         // Let's start by animating the title.
                         // We want it to fade as it scrolls out
-                        title.setAlpha(1.0f - absPosition);
+                        title.setAlpha(1f - absPosition);
+                        title.setScaleX(1f - absPosition);
+                        title.setScaleY(1f - absPosition);
                         llBg.setAlpha(1f - absPosition);
-                        llBg.setTranslationX(-pageWidthTimesPosition);
+                        llBg.setTranslationX(pageWidth * -position);
                         // Now the description. We also want this one to
                         // fade, but the animation should also slowly move
                         // down and out of the screen
 //            description.setTranslationX(-pageWidthTimesPosition / 2f);
                         description.setAlpha(1.0f - absPosition);
+                        description.setScaleX(1f - absPosition);
+                        description.setScaleY(1f - absPosition);
                         // Now, we want the image to move to the right,
                         // i.e. in the opposite direction of the rest of the
                         // content while fading out
@@ -111,8 +121,9 @@ public class SliderScreenActivity extends AppCompatActivity {
                         // isn't null.
                         if (computer != null) {
                             computer.setAlpha(1.0f - absPosition);
-                            computer.setTranslationX(pageWidthTimesPosition * 1.5f);
-
+//                            computer.setTranslationX(pageWidthTimesPosition * 1.5f);
+                            computer.setScaleX(1f - absPosition);
+                            computer.setScaleY(1f - absPosition);
                         }
 
                         // Finally, it can be useful to know the direction
@@ -148,12 +159,15 @@ public class SliderScreenActivity extends AppCompatActivity {
         public void onPageSelected(int position) {
             switch (position) {
                 case 2:
-                    circleIndicator.setVisibility(View.GONE);
+//                    circleIndicator.setVisibility(View.GONE);
                     llFinish.setVisibility(View.VISIBLE);
+
                     break;
                 default:
-                    circleIndicator.setVisibility(View.VISIBLE);
+//                    circleIndicator.setVisibility(View.VISIBLE);
                     llFinish.setVisibility(View.GONE);
+
+
                     break;
             }
 

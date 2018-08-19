@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +32,7 @@ import android.view.animation.Interpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +48,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -59,6 +63,7 @@ import com.minhpvn.restaurantsapp.model.MapPoint;
 import com.minhpvn.restaurantsapp.model.googleMapModel.AddressDetailResponse;
 import com.minhpvn.restaurantsapp.model.googleMapModel.Example;
 import com.minhpvn.restaurantsapp.model.googleMapModel.QueryAddressResponse;
+import com.minhpvn.restaurantsapp.ultil.Toolbox;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +82,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         GoogleApiClient.OnConnectionFailedListener,
         GoogleMap.OnMarkerClickListener,
         GoogleMap.OnMapClickListener,
+        GoogleMap.OnMapLongClickListener,
         GoogleMap.OnCameraMoveStartedListener,
         GoogleMap.OnCameraMoveListener,
         GoogleMap.OnCameraMoveCanceledListener,
@@ -120,8 +126,15 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     private GoogleMapPlaceAdapter googleMapPlaceAdapter;
     LatLng currentPoint;
     ContainerFragment containerFragment;
-    Animation animationbbb ;
+    Animation animationbbb, fadeIn, fadeOut;
     boolean isShow = true;
+    Drawable drawable;
+    UiSettings uiSettings;
+
+    public LatLng getBegin() {
+        return begin;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -135,6 +148,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
 
         };
+        drawable = pinLocation.getDrawable();
+
         Log.d("vvmvmvm", mapPointList[1].toString());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -155,6 +170,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
                 mPresenter.directByCar("", begin, des, "");
             }
         });
+
         initViews();
         initControls();
         return view;
@@ -162,6 +178,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     private void initViews() {
         animationbbb = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in_animation);
+        fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+        fadeOut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
         googleMapPlaceAdapter = new GoogleMapPlaceAdapter(getContext(), listData, new GoogleMapPlaceAdapter.OnClickEvent() {
             @Override
             public void onClick(QueryAddressResponse.Predictions predictions) {
@@ -186,7 +204,15 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
                 if (!hasFocus) {
                     hideKeyboard(v);
                 } else {
-                    resultLayout.setVisibility(View.VISIBLE);
+                    resultLayout.startAnimation(fadeOut);
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            resultLayout.setVisibility(View.VISIBLE);
+                        }
+                    }, 500);
+//                    resultLayout.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -225,7 +251,6 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
         for (int i = 0; i < mapPointList.length; i++) {
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.title(mapPointList[i].getPointName());
@@ -245,13 +270,41 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
+
         pinLocation.setVisibility(View.VISIBLE);
         mMap.setOnMapClickListener(this);
+        mMap.setOnMapLongClickListener(this);
         mMap.setOnMarkerClickListener(this);
         mMap.setOnCameraIdleListener(this);
         mMap.setOnCameraMoveStartedListener(this);
         mMap.setOnCameraMoveListener(this);
         mMap.setOnCameraMoveCanceledListener(this);
+
+        View mapView = mapFragment.getView();
+        if (mapView != null) {
+            View locationButton = ((View) mapView.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("2"));
+            RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams)
+                    locationButton.getLayoutParams();
+// position on right bottom
+            rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
+            rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            rlp.setMargins(0, 0, 20, 20);
+        }
+
+        // change compass position
+        if (mapView != null &&
+                mapView.findViewById(Integer.parseInt("1")) != null) {
+            // Get the view
+            View locationCompass = ((View) mapView.findViewById(Integer.parseInt("1")).getParent()).findViewById(Integer.parseInt("5"));
+            // and next place it, on bottom right (as Google Maps app)
+            RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)
+                    locationCompass.getLayoutParams();
+            // position on right bottom
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, 0);
+            layoutParams.setMargins(0, 0, 20, 20);
+        }
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -463,13 +516,28 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public void onMapClick(LatLng latLng) {
+        edtSearch.clearFocus();
         if (getActivity() != null) {
             hideKeyboard2(getActivity());
         }
-        resultLayout.setVisibility(View.GONE);
+        if (resultLayout.getVisibility() == View.VISIBLE) {
+            resultLayout.startAnimation(fadeIn);
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    resultLayout.setVisibility(View.GONE);
+
+                }
+            }, 500);
+        }
+
         hideInfo();
     }
 
+    @Override
+    public void onMapLongClick(LatLng latLng) {
+
+    }
     @Override
     public boolean onMarkerClick(Marker marker) {
         if (getActivity() != null) {
@@ -685,8 +753,18 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public boolean onBackPressed() {
+        edtSearch.clearFocus();
         if (infoLayout.getVisibility() == View.VISIBLE || resultLayout.getVisibility() == View.VISIBLE) {
-            resultLayout.setVisibility(View.GONE);
+            resultLayout.startAnimation(fadeIn);
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    resultLayout.setVisibility(View.GONE);
+
+                }
+            }, 500);
+
             hideInfo();
             return true;
         } else {
@@ -709,9 +787,12 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public void onCameraMove() {
-        if(isShow){
+        if (isShow) {
 //            pinLocation2.setVisibility(View.VISIBLE);
             pinLocation.startAnimation(animationbbb);
+            if (drawable instanceof Animatable) {
+                ((Animatable) drawable).start();
+            }
             isShow = false;
         }
 
@@ -727,5 +808,14 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     public void onCameraIdle() {
 //        pinLocation2.setVisibility(View.GONE);
         isShow = true;
+        if (drawable instanceof Animatable) {
+            if (((Animatable) drawable).isRunning()) {
+                ((Animatable) drawable).stop();
+
+            }
+        }
+
     }
+
+
 }

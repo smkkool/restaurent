@@ -63,6 +63,7 @@ public class ContainerFragment extends Fragment {
         viewPager.setOffscreenPageLimit(4);
         viewPager.setAdapter(pagerAdapter);
         bottomNavigation.setSelectedItemId(R.id.menu_newfeed);
+        bottomNavigation.setItemIconTintList(null);
         viewPager.setCurrentItem(0, false);
         viewPager.setPagingEnabled(false);
         Toolbox.disableShiftMode(bottomNavigation);

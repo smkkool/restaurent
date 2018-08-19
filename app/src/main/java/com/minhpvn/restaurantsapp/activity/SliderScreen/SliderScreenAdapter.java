@@ -16,8 +16,8 @@ public class SliderScreenAdapter extends PagerAdapter {
     Context context;
     LayoutInflater layoutInflater;
 
-    public int[] bgColor = {R.color.colorAccent, R.color.colorPrimary, R.color.colorGreen};
-    public int[] img = {R.drawable.a, R.drawable.b, R.drawable.c};
+    public int[] bgColor = {R.drawable.bg_new_gradient, R.drawable.bg_new_gradient_two, R.drawable.bg_new_gradient_three};
+    public int[] img = {R.drawable.intro1, R.drawable.intro2, R.drawable.intro3};
     public String[] header = {"FAST", "MOVE", "BEST"};
     public String[] strContent = {
             "Loreting a It ypesetting, remaining essentially unchanged.Loreting a It ypesetting, remaining essentially unchanged.Loreting a It ypesetting, remaining essentially unchanged.",

@@ -1,9 +1,11 @@
 package com.minhpvn.restaurantsapp;
 
 
+import android.content.Context;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.minhpvn.restaurantsapp.fragment.ContainerFragment;
@@ -12,6 +14,8 @@ import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
+
+
 
     @Override
     public void onBackPressed() {
@@ -57,5 +61,12 @@ public class BaseActivity extends AppCompatActivity {
             return (ContainerFragment) fragment;
         }
         return null;
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "abc" +
+                "", Toast.LENGTH_SHORT).show();
     }
 }

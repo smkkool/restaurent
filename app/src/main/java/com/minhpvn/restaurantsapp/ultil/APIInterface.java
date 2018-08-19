@@ -6,6 +6,7 @@ import com.minhpvn.restaurantsapp.model.UserList;
 import com.minhpvn.restaurantsapp.model.googleMapModel.AddressDetailResponse;
 import com.minhpvn.restaurantsapp.model.googleMapModel.Example;
 import com.minhpvn.restaurantsapp.model.googleMapModel.QueryAddressResponse;
+import com.minhpvn.restaurantsapp.model.googleMapNearby.Example2;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -43,4 +44,12 @@ public interface APIInterface {
     @GET("api/geocode/json")
     Call<AddressDetailResponse> queryAddressDetail(@Query(value = "place_id") String placeId,
                                                    @Query("key") String key);
+
+    @GET("api/place/nearbysearch/json?sensor=true&key=AIzaSyAocTT3gezvFMp_RIbgm1sb3bTce2g9fa0")
+    Call<Example2> getNearbyPlaces(@Query("type") String type, @Query("location") String location, @Query("radius") int radius);
+
+
+//    https://maps.googleapis.com/maps/api/place/photo?photoreference=PHOTO_REFERENCE&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=YOUR_API_KEY
+    @GET("api/place/photo?sensor=false&key=AIzaSyAocTT3gezvFMp_RIbgm1sb3bTce2g9fa0")
+    Call<String> getPhoto(@Query("photoreference") String photoreference, @Query("maxheight") int maxheight, @Query("maxwidth") int maxwidth);
 }

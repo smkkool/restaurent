@@ -36,9 +36,6 @@ public class CheckNetworkActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         if (isOnline()) {
-            tvNetwork.setText("Mạng sẵn sàng");
-            pbNetwork.setVisibility(View.GONE);
-            tvTryAgain.setVisibility(View.GONE);
             Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
             finish();

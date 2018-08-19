@@ -1,104 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#efeff4"
-    android:clickable="true"
-    android:focusable="true"
-    android:orientation="vertical"
-    tools:context=".activity.MainActivity">
+    android:background="#eeeef3"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
     <LinearLayout
+        android:id="@+id/lnTop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="#fdfdfe"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:id="@+id/imgProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/a" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:padding="5dp">
 
-            <com.facebook.login.widget.ProfilePictureView
-                android:id="@+id/imgProfile"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="5dp"
-                android:src="@drawable/a" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phạm Vũ Ngọc Minh"
+                android:textColor="#242424"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thành Viên Mới "
+                android:textColor="#2c2c2c" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lnTop">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            tools:context=".activity.MainActivity">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:layout_height="match_parent"
+                android:background="#eeeef3"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Gợi ý cho bạn"
+                    android:textColor="#000001"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcv2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phạm Vũ Ngọc Minh"
-                    android:textColor="#4c4c4c" />
+                    android:layout_gravity="center"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    tools:listitem="@layout/highlight" />
 
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Quán ăn gần đây"
+                    android:textColor="#000001"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thành Viên Mới "
-                    android:textColor="#4c4c4c" />
+                    android:layout_gravity="center"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    tools:listitem="@layout/reward" />
+
+
             </LinearLayout>
 
-        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#b2b2b2" />
-
-        <LinearLayout
-            android:id="@+id/fl_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:background="#efeff4"
-            android:orientation="vertical"
-            >
-
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rcv1"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                app:layoutManager="android.support.v7.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:listitem="@layout/reward" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Dành cho bạn"
-                android:textColor="#191919"
-                android:textSize="14dp" />
-
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="Tin tức"
-                android:textColor="#191919"
-                android:textSize="14dp" />
-
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-
-</android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

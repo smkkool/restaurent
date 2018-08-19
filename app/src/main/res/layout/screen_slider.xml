@@ -9,13 +9,12 @@
         android:id="@+id/viewPagerSlider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#632a2a" />
+        android:background="#000000" />
 
     <me.relex.circleindicator.CircleIndicator
         android:id="@+id/circleIndicator"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_centerInParent="true"
@@ -45,7 +44,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="20dp"
+        android:padding="30dp"
         android:visibility="gone"
         tools:visibility="visible">
 
