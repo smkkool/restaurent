@@ -27,9 +27,9 @@ public class HomePresenter implements HomeContract.Presenter {
 
 
     @Override
-    public void getNearbyPlaces(String type, String location, int radius) {
+    public void getNearbyPlaces(String type, String location, int radius,String pagetoken) {
         apiInterface = ApiClient.getClientGoogleMap().create(APIInterface.class);
-        Call<Example2> call = apiInterface.getNearbyPlaces(type, location, radius);
+        Call<Example2> call = apiInterface.getNearbyPlaces(type, location, radius,pagetoken);
         call.enqueue(new Callback<Example2>() {
             @Override
             public void onResponse(Call<Example2> call, Response<Example2> response) {
@@ -47,7 +47,7 @@ public class HomePresenter implements HomeContract.Presenter {
 //                    e.printStackTrace();
 //                }
 
-                mView.getNearbyPlacesSuccess(response.body().getResults());
+                mView.getNearbyPlacesSuccess(response);
             }
 
             @Override

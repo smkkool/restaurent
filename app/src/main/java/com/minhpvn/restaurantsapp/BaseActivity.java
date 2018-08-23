@@ -1,11 +1,10 @@
 package com.minhpvn.restaurantsapp;
 
 
-import android.content.Context;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.minhpvn.restaurantsapp.fragment.ContainerFragment;
@@ -14,7 +13,6 @@ import java.util.List;
 
 public class BaseActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
-
 
 
     @Override
@@ -42,6 +40,10 @@ public class BaseActivity extends AppCompatActivity {
                 super.onBackPressed();
                 return;
             }
+            if (getSupportFragmentManager().getBackStackEntryCount() != 0) {
+                getSupportFragmentManager().popBackStackImmediate(getSupportFragmentManager().getBackStackEntryCount() - 1, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                return;
+            }
             this.doubleBackToExitPressedOnce = true;
             Toast.makeText(this, "Nhấn Back một lần nữa để thoát ứng dụng", Toast.LENGTH_SHORT).show();
 
@@ -53,6 +55,7 @@ public class BaseActivity extends AppCompatActivity {
                 }
             }, 2000);
         }
+
     }
 
     public ContainerFragment getContainerFragment() {

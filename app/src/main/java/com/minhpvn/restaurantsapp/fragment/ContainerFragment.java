@@ -7,13 +7,13 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.minhpvn.restaurantsapp.BaseFragment;
 import com.minhpvn.restaurantsapp.R;
 import com.minhpvn.restaurantsapp.ultil.MyViewPager;
 import com.minhpvn.restaurantsapp.ultil.Toolbox;
@@ -24,10 +24,11 @@ import butterknife.ButterKnife;
 public class ContainerFragment extends Fragment {
     @BindView(R.id.bottomNavigation) BottomNavigationView bottomNavigation;
     @BindView(R.id.viewPager) MyViewPager viewPager;
+    @BindView(R.id.toolbar) Toolbar toolbar;
 
     private HomeFragment homeFragment;
-    private DeliveryFragment deliveryFragment;
-    private RestaurentFragment restaurentFragment;
+    private HistoryFragment historyFragment;
+    //    private RestaurentFragment restaurentFragment;
     private AccountFragment accountFragment;
 
     @Nullable
@@ -35,18 +36,26 @@ public class ContainerFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_container, container, false);
         ButterKnife.bind(this, view);
-
+//        setupToolbar();
         setupViewPager();
         setupBottomBar();
         return view;
     }
 
+    private void setupToolbar() {
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        toolbar.setTitle("Trang chủ");
+        setHasOptionsMenu(true);
+    }
+
     public MyViewPager getViewPager() {
         return viewPager;
     }
+
     public BottomNavigationView getBottomNavigationView() {
         return bottomNavigation;
     }
+
     private void setupViewPager() {
         final FragmentStatePagerAdapter pagerAdapter = new FragmentStatePagerAdapter(getActivity().getSupportFragmentManager()) {
             @Override
@@ -56,7 +65,7 @@ public class ContainerFragment extends Fragment {
 
             @Override
             public int getCount() {
-                return 4;
+                return 3;
             }
 
         };
@@ -81,16 +90,16 @@ public class ContainerFragment extends Fragment {
                 f = homeFragment;
                 break;
             case 1:
-                if (deliveryFragment == null)
-                    deliveryFragment = new DeliveryFragment();
-                f = deliveryFragment;
+                if (historyFragment == null)
+                    historyFragment = new HistoryFragment();
+                f = historyFragment;
                 break;
+//            case 2:
+//                if (restaurentFragment == null)
+//                    restaurentFragment = new RestaurentFragment();
+//                f = restaurentFragment;
+//                break;
             case 2:
-                if (restaurentFragment == null)
-                    restaurentFragment = new RestaurentFragment();
-                f = restaurentFragment;
-                break;
-            case 3:
                 if (accountFragment == null)
                     accountFragment = new AccountFragment();
                 f = accountFragment;
@@ -114,12 +123,13 @@ public class ContainerFragment extends Fragment {
                         break;
                     case R.id.menu_delivery:
                         viewPager.setCurrentItem(1, false);
+                        historyFragment.refreshData();
                         break;
-                    case R.id.menu_create_order:
-                        viewPager.setCurrentItem(2, false);
-                        break;
+//                    case R.id.menu_create_order:
+//                        viewPager.setCurrentItem(2, false);
+//                        break;
                     case R.id.menu_setting:
-                        viewPager.setCurrentItem(3, false);
+                        viewPager.setCurrentItem(2, false);
                         break;
                     default:
                         viewPager.setCurrentItem(0, false);

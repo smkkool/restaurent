@@ -47,6 +47,16 @@ public class Result {
     @Expose
     private Integer priceLevel;
 
+    private Double km;
+
+    public Double getKm() {
+        return km;
+    }
+
+    public void setKm(Double km) {
+        this.km = km;
+    }
+
     public Geometry getGeometry() {
         return geometry;
     }

@@ -29,4 +29,8 @@
         <item name="colorControlNormal">@color/color_ratingbar_deactive</item>
         <item name="colorControlActivated">@color/color_ratingbar_active</item>
     </style>
+    <style name="RatingBarDefault" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/color_ratingbar_deactive_default</item>
+        <item name="colorControlActivated">@color/color_ratingbar_active_default</item>
+    </style>
 </resources>

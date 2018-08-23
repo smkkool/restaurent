@@ -8,11 +8,19 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
     <com.minhpvn.restaurantsapp.ultil.MyViewPager
         android:id="@+id/viewPager"
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
-        android:layout_above="@id/bottomNavigation"
         android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigation"
         android:background="#ffdc" />
 
     <!--<android.support.design.widget.TabLayout-->
@@ -30,9 +38,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:itemBackground="@drawable/bgr_bottombar"
         android:background="#ffffff"
+        app:itemBackground="@drawable/bgr_bottombar"
         app:itemTextColor="@drawable/nav_item_color_state"
-        app:menu="@menu/menu_main"
-        />
+        app:menu="@menu/menu_main" />
 </RelativeLayout>

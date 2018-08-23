@@ -1,10 +1,16 @@
 package com.minhpvn.restaurantsapp.ultil;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.minhpvn.restaurantsapp.fragment.ContainerFragment;
 
 import java.lang.reflect.Field;
 
@@ -56,4 +62,6 @@ public class Toolbox {
             Log.e("BNVHelper", "Unable to change value of shift mode", e);
         }
     }
+
+
 }

@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -24,10 +25,12 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<Result> data;
     private Result current;
     APIInterface apiInterface;
+    private OnItemClick onItemClick;
 
-    public HomeAdapter(Context context, List<Result> data) {
+    public HomeAdapter(Context context, List<Result> data, OnItemClick onItemClick) {
         this.context = context;
         this.data = data;
+        this.onItemClick = onItemClick;
         inflater = LayoutInflater.from(context);
     }
 
@@ -40,7 +43,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         final MyHolder myHolder = (MyHolder) holder;
         current = data.get(position);
 //                Glide.with(context).load(current.avatar).into(myHolder.imageView);
@@ -65,6 +68,13 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (current.getRating() != null) {
             myHolder.rbRatingBar.setRating(Float.parseFloat(current.getRating().toString()));
         }
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClick.onClick(data.get(position));
+            }
+        });
+        myHolder.tvKm.setText(current.getKm().intValue() + " m");
 
     }
 
@@ -79,6 +89,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         TextView tvAddress;
         TextView tvActive;
         RatingBar rbRatingBar;
+        TextView tvKm;
 
         public MyHolder(View itemView) {
             super(itemView);
@@ -87,8 +98,13 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             tvAddress = itemView.findViewById(R.id.tvAddress);
             tvActive = itemView.findViewById(R.id.tvActive);
             rbRatingBar = itemView.findViewById(R.id.rbRatingBar);
+            tvKm = itemView.findViewById(R.id.tvKm);
 
         }
+    }
+
+    public interface OnItemClick {
+        void onClick(Result item);
     }
 
 }

@@ -46,10 +46,10 @@ public interface APIInterface {
                                                    @Query("key") String key);
 
     @GET("api/place/nearbysearch/json?sensor=true&key=AIzaSyAocTT3gezvFMp_RIbgm1sb3bTce2g9fa0")
-    Call<Example2> getNearbyPlaces(@Query("type") String type, @Query("location") String location, @Query("radius") int radius);
+    Call<Example2> getNearbyPlaces(@Query("type") String type, @Query("location") String location, @Query("radius") int radius, @Query("pagetoken") String pagetoken);
 
 
-//    https://maps.googleapis.com/maps/api/place/photo?photoreference=PHOTO_REFERENCE&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=YOUR_API_KEY
+    //    https://maps.googleapis.com/maps/api/place/photo?photoreference=PHOTO_REFERENCE&sensor=false&maxheight=MAX_HEIGHT&maxwidth=MAX_WIDTH&key=YOUR_API_KEY
     @GET("api/place/photo?sensor=false&key=AIzaSyAocTT3gezvFMp_RIbgm1sb3bTce2g9fa0")
     Call<String> getPhoto(@Query("photoreference") String photoreference, @Query("maxheight") int maxheight, @Query("maxwidth") int maxwidth);
 }

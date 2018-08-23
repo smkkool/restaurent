@@ -63,7 +63,6 @@ import com.minhpvn.restaurantsapp.model.MapPoint;
 import com.minhpvn.restaurantsapp.model.googleMapModel.AddressDetailResponse;
 import com.minhpvn.restaurantsapp.model.googleMapModel.Example;
 import com.minhpvn.restaurantsapp.model.googleMapModel.QueryAddressResponse;
-import com.minhpvn.restaurantsapp.ultil.Toolbox;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,10 +71,13 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.davidea.flexibleadapter.common.SmoothScrollLinearLayoutManager;
-import pl.droidsonroids.gif.GifImageView;
 import retrofit2.Response;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
+import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID;
+import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_NONE;
+import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_SATELLITE;
+import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_TERRAIN;
 
 public class RestaurentFragment extends BaseFragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -133,6 +135,18 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     public LatLng getBegin() {
         return begin;
+    }
+
+    private LatLng destination;
+    private String name, address;
+
+    public void setDestination(LatLng destination) {
+        this.destination = destination;
+    }
+
+    public void setData(String name, String address) {
+        this.name = name;
+        this.address = address;
     }
 
     @Nullable
@@ -247,6 +261,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
@@ -270,7 +285,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
-
+        mMap.setMapType(MAP_TYPE_TERRAIN);
+        mMap.setTrafficEnabled(true);
         pinLocation.setVisibility(View.VISIBLE);
         mMap.setOnMapClickListener(this);
         mMap.setOnMapLongClickListener(this);
@@ -352,18 +368,20 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         begin = new LatLng(location.getLatitude(), location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
-        markerOptions.title("Current Position");
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker());
+        markerOptions.snippet("");
+        markerOptions.title("Vị trí hiện tại");
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
         mCurrLocationMarker = mMap.addMarker(markerOptions);
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-
         //stop location updates
         if (mGoogleApiClient != null) {
             LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, (LocationListener) this);
         }
+        if (destination != null)
+            mPresenter.directByCar("", begin, destination, "");
     }
 
 
@@ -538,6 +556,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     public void onMapLongClick(LatLng latLng) {
 
     }
+
     @Override
     public boolean onMarkerClick(Marker marker) {
         if (getActivity() != null) {
@@ -598,8 +617,15 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             Log.d("onResponse", "There is an error");
             e.printStackTrace();
         }
+
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.title(name);
+        markerOptions.snippet(address);
+        markerOptions.position(new LatLng(destination.latitude, destination.longitude));
+        mMap.addMarker(markerOptions);
+
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(begin).zoom(15).tilt(30).build();
+                .target(begin).zoom(20).tilt(30).build();
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 400, null);
 
 

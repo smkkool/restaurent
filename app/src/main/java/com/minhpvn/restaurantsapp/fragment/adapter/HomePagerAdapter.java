@@ -6,20 +6,20 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
 import com.minhpvn.restaurantsapp.fragment.AccountFragment;
-import com.minhpvn.restaurantsapp.fragment.DeliveryFragment;
+import com.minhpvn.restaurantsapp.fragment.HistoryFragment;
 import com.minhpvn.restaurantsapp.fragment.HomeFragment;
 import com.minhpvn.restaurantsapp.fragment.RestaurentFragment;
 
 public class HomePagerAdapter extends FragmentStatePagerAdapter {
     private HomeFragment homeFragment;
-    private DeliveryFragment deliveryFragment;
+    private HistoryFragment historyFragment;
     private RestaurentFragment restaurentFragment;
     private AccountFragment accountFragment;
 
     public HomePagerAdapter(FragmentManager fm) {
         super(fm);
         homeFragment = new HomeFragment();
-        deliveryFragment = new DeliveryFragment();
+        historyFragment = new HistoryFragment();
         restaurentFragment = new RestaurentFragment();
         accountFragment = new AccountFragment();
     }
@@ -30,7 +30,7 @@ public class HomePagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return homeFragment;
             case 1:
-                return deliveryFragment;
+                return historyFragment;
             case 2:
                 return restaurentFragment;
             case 3:
@@ -47,7 +47,7 @@ public class HomePagerAdapter extends FragmentStatePagerAdapter {
                 homeFragment = (HomeFragment) f;
                 break;
             case 1:
-                deliveryFragment = (DeliveryFragment) f;
+                historyFragment = (HistoryFragment) f;
                 break;
             case 2:
                 restaurentFragment = (RestaurentFragment) f;

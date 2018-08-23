@@ -8,11 +8,11 @@
     <item
         android:id="@+id/menu_delivery"
         android:icon="@drawable/ic_deli"
-        android:title="Delivery" />
-    <item
-        android:id="@+id/menu_create_order"
-        android:icon="@drawable/ic_loca"
-        android:title="Địa chỉ" />
+        android:title="Lịch sử" />
+    <!--<item-->
+        <!--android:id="@+id/menu_create_order"-->
+        <!--android:icon="@drawable/ic_loca"-->
+        <!--android:title="Địa chỉ" />-->
     <item
         android:id="@+id/menu_setting"
         android:icon="@drawable/ic_location"

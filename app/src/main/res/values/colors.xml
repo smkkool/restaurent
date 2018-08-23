@@ -18,4 +18,6 @@
     <color name="color_deactive">#e63b1d</color>
     <color name="color_ratingbar_active">#ffca3a</color>
     <color name="color_ratingbar_deactive">#d6d6d6</color>
+    <color name="color_ratingbar_active_default">#ffc935</color>
+    <color name="color_ratingbar_deactive_default">#ffc935</color>
 </resources>

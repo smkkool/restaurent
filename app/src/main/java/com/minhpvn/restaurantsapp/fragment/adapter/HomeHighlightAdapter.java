@@ -24,10 +24,11 @@ public class HomeHighlightAdapter extends RecyclerView.Adapter<RecyclerView.View
     private List<Result> data;
     private Result current;
     APIInterface apiInterface;
-
-    public HomeHighlightAdapter(Context context, List<Result> data) {
+    private OnItemClick onItemClick;
+    public HomeHighlightAdapter(Context context, List<Result> data,OnItemClick onItemClick) {
         this.context = context;
         this.data = data;
+        this.onItemClick = onItemClick;
         inflater = LayoutInflater.from(context);
     }
 
@@ -40,14 +41,22 @@ public class HomeHighlightAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         final MyHolder myHolder = (MyHolder) holder;
         current = data.get(position);
 //                Glide.with(context).load(current.avatar).into(myHolder.imageView);
 
-
+        if(data.get(position).getRating()!=null){
+            myHolder.tvRate.setText(data.get(position).getRating().toString()+ " ");
+        }
+        myHolder.ratingBar.setRating(1);
         myHolder.tvName.setText(current.getName());
-
+        myHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClick.onClick(data.get(position));
+            }
+        });
     }
 
     @Override
@@ -58,12 +67,18 @@ public class HomeHighlightAdapter extends RecyclerView.Adapter<RecyclerView.View
     class MyHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView tvName;
+        TextView tvRate;
+        RatingBar ratingBar;
 
         public MyHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.img);
             tvName = itemView.findViewById(R.id.tvName);
-
+            tvRate = itemView.findViewById(R.id.tvRate);
+            ratingBar = itemView.findViewById(R.id.ratingBar);
         }
+    }
+    public  interface OnItemClick {
+        void onClick(Result item);
     }
 }

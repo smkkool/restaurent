@@ -15,7 +15,7 @@ import retrofit2.Response;
 interface HomeContract {
     interface View extends IView<Presenter> {
 
-        void getNearbyPlacesSuccess(List<Result> response);
+        void getNearbyPlacesSuccess(Response<Example2> response);
 
 
         void getPhotoSuccess(Response<String> response);
@@ -23,7 +23,7 @@ interface HomeContract {
 
     interface Presenter extends IPresenter {
 
-        void getNearbyPlaces(String type, String location, int radius);
+        void getNearbyPlaces(String type, String location, int radius,String pageToken);
 
         void getPhoto(String photoreference, int maxheight, int maxwidth);
     }
