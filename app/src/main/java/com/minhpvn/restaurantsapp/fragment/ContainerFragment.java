@@ -28,7 +28,7 @@ public class ContainerFragment extends Fragment {
 
     private HomeFragment homeFragment;
     private HistoryFragment historyFragment;
-    //    private RestaurentFragment restaurentFragment;
+    //    private RestaurentFragment restaurentFragmenhot;
     private AccountFragment accountFragment;
 
     @Nullable
@@ -69,7 +69,7 @@ public class ContainerFragment extends Fragment {
             }
 
         };
-        viewPager.setOffscreenPageLimit(4);
+        viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(pagerAdapter);
         bottomNavigation.setSelectedItemId(R.id.menu_newfeed);
         bottomNavigation.setItemIconTintList(null);

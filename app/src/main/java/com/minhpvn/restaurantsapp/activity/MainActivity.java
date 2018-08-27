@@ -68,7 +68,6 @@ public class MainActivity extends BaseActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.setCustomAnimations(R.anim.pull_in_right, R.anim.push_out_left, R.anim.pull_in_left, R.anim.push_out_right);
         if (containerFragment != null) {
-
             ft.replace(R.id.fl_container, containerFragment, "containerFragment").commitAllowingStateLoss();
         }
 

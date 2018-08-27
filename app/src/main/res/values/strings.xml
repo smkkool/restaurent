@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RestaurantsApp</string>
+    <string name="app_name">Food Nearby</string>
     <string name="facebook_app_id">2139377756305496</string>
     <string name="fb_login_protocol_scheme">fb2139377756305496</string>
     <string name="title_activity_maps">Map</string>

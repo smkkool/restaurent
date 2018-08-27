@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.Animatable;
@@ -16,11 +17,8 @@ import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +50,7 @@ import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
@@ -70,14 +69,11 @@ import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import eu.davidea.flexibleadapter.common.SmoothScrollLinearLayoutManager;
 import retrofit2.Response;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
-import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_HYBRID;
-import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_NONE;
-import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_SATELLITE;
-import static com.google.android.gms.maps.GoogleMap.MAP_TYPE_TERRAIN;
 
 public class RestaurentFragment extends BaseFragment implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
@@ -90,6 +86,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         GoogleMap.OnCameraMoveCanceledListener,
         GoogleMap.OnCameraIdleListener,
         LocationListener, RestaurentContract.View {
+    private static final String TAG = "LOG_BUG_R";
     GoogleApiClient mGoogleApiClient;
     @BindView(R.id.pin_location) ImageView pinLocation;
     @BindView(R.id.info_title) TextView infoTitle;
@@ -102,15 +99,16 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     @BindView(R.id.showDirect) TextView showDirect;
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     public static final String GOOGLE_API_KEY = "AIzaSyAocTT3gezvFMp_RIbgm1sb3bTce2g9fa0";
-    @BindView(R.id.btn_clear) ImageView btnClear;
-    @BindView(R.id.btn_select_location) ImageView btnSelectLocation;
-    @BindView(R.id.edt_search) AppCompatEditText edtSearch;
+    //    @BindView(R.id.btn_clear) ImageView btnClear;
+//    @BindView(R.id.btn_select_location) ImageView btnSelectLocation;
+    //    @BindView(R.id.edt_search) AppCompatEditText edtSearch;
     @BindView(R.id.list_result) RecyclerView listResult;
     @BindView(R.id.fake_view) View fakeView;
     @BindView(R.id.empty_warning) TextView emptyWarning;
-    @BindView(R.id.search_box) CardView searchBox;
+    //    @BindView(R.id.search_box) CardView searchBox;
     @BindView(R.id.result_layout) CardView resultLayout;
     @BindView(R.id.pin_location2) ImageView pinLocation2;
+    @BindView(R.id.ivClose) ImageView ivClose;
     private GoogleMap mMap;
     private SupportMapFragment mapFragment;
     private Location mLastLocation;
@@ -211,68 +209,80 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     }
 
     private void initControls() {
-        edtSearch.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                hideInfo();
-                if (!hasFocus) {
-                    hideKeyboard(v);
-                } else {
-                    resultLayout.startAnimation(fadeOut);
-
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            resultLayout.setVisibility(View.VISIBLE);
-                        }
-                    }, 500);
+//        edtSearch.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                hideInfo();
+//                if (!hasFocus) {
+//                    hideKeyboard(v);
+//                } else {
+//                    resultLayout.startAnimation(fadeOut);
+//
+//                    handler.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            resultLayout.setVisibility(View.VISIBLE);
+//                        }
+//                    }, 500);
+//                }
+//            }
+//        });
+//        edtSearch.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//                String query = s.toString();
+//                listResult.smoothScrollToPosition(0);
+//                if (!query.isEmpty()) {
+//                    hideInfo();
+//                    btnClear.setVisibility(View.VISIBLE);
+//                    mPresenter.queryAddress(query, GOOGLE_API_KEY, "");
 //                    resultLayout.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-        edtSearch.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                String query = s.toString();
-                listResult.smoothScrollToPosition(0);
-                if (!query.isEmpty()) {
-                    hideInfo();
-                    btnClear.setVisibility(View.VISIBLE);
-                    mPresenter.queryAddress(query, GOOGLE_API_KEY, "");
-                    resultLayout.setVisibility(View.VISIBLE);
-//                    showResult();
-                } else {
-                    btnClear.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
+//                } else {
+//                    btnClear.setVisibility(View.INVISIBLE);
+//                }
+//            }
+//        });
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        try {
+            boolean success = googleMap.setMapStyle(
+                    MapStyleOptions.loadRawResourceStyle(
+                            getApplicationContext(), R.raw.map_type));
+
+            if (!success) {
+                Log.e(TAG, "Style parsing failed.");
+            }
+        } catch (Resources.NotFoundException e) {
+            Log.e(TAG, "Can't find style. Error: ", e);
+        }
+
+
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        for (int i = 0; i < mapPointList.length; i++) {
-            MarkerOptions markerOptions = new MarkerOptions();
-            markerOptions.title(mapPointList[i].getPointName());
-            markerOptions.snippet(mapPointList[i].getPointDescription());
-            markerOptions.position(new LatLng(mapPointList[i].getPointLat(), mapPointList[i].getPointLong()));
-            mMap.addMarker(markerOptions);
-        }
+
+//        for (int i = 0; i < mapPointList.length; i++) {
+//            MarkerOptions markerOptions = new MarkerOptions();
+//            markerOptions.title(mapPointList[i].getPointName());
+//            markerOptions.snippet(mapPointList[i].getPointDescription());
+//            markerOptions.position(new LatLng(mapPointList[i].getPointLat(), mapPointList[i].getPointLong()));
+//            mMap.addMarker(markerOptions);
+//        }
         //Initialize Google Play Services
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(getActivity(),
@@ -285,12 +295,18 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
-        mMap.setMapType(MAP_TYPE_TERRAIN);
+//        mMap.setMapType(MAP_TYPE_TERRAIN);
         mMap.setTrafficEnabled(true);
         pinLocation.setVisibility(View.VISIBLE);
-        mMap.setOnMapClickListener(this);
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+
+            }
+        });
         mMap.setOnMapLongClickListener(this);
         mMap.setOnMarkerClickListener(this);
+
         mMap.setOnCameraIdleListener(this);
         mMap.setOnCameraMoveStartedListener(this);
         mMap.setOnCameraMoveListener(this);
@@ -534,7 +550,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public void onMapClick(LatLng latLng) {
-        edtSearch.clearFocus();
+//        edtSearch.clearFocus();
         if (getActivity() != null) {
             hideKeyboard2(getActivity());
         }
@@ -580,7 +596,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         infoTitle.setText(type);
         infoAddress.setText(marker.getSnippet());
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(marker.getPosition()).zoom(15).tilt(30).build();
+                .target(marker.getPosition()).zoom(30).tilt(30).build();
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 400, null);
 
         showInfo();
@@ -600,10 +616,12 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             if (line != null) {
                 line.remove();
             }
+            showDirect.setVisibility(View.VISIBLE);
             for (int i = 0; i < response.body().getRoutes().size(); i++) {
                 String distance = response.body().getRoutes().get(i).getLegs().get(i).getDistance().getText();
                 String time = response.body().getRoutes().get(i).getLegs().get(i).getDuration().getText();
                 showDirect.setText("Distance:" + distance + ", Duration:" + time);
+
                 String encodedString = response.body().getRoutes().get(0).getOverviewPolyline().getPoints();
                 List<LatLng> list = decodePoly(encodedString);
                 line = mMap.addPolyline(new PolylineOptions()
@@ -622,6 +640,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         markerOptions.title(name);
         markerOptions.snippet(address);
         markerOptions.position(new LatLng(destination.latitude, destination.longitude));
+
         mMap.addMarker(markerOptions);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
@@ -779,7 +798,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public boolean onBackPressed() {
-        edtSearch.clearFocus();
+//        edtSearch.clearFocus();
         if (infoLayout.getVisibility() == View.VISIBLE || resultLayout.getVisibility() == View.VISIBLE) {
             resultLayout.startAnimation(fadeIn);
 
@@ -844,4 +863,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     }
 
 
+    @OnClick(R.id.ivClose)
+    public void onViewClicked() {
+      Objects.requireNonNull(getActivity()).onBackPressed();
+    }
 }

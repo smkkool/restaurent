@@ -24,8 +24,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.relex.circleindicator.CircleIndicator;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 public class SliderScreenActivity extends AppCompatActivity {
     @BindView(R.id.viewPagerSlider) ViewPager viewPagerSlider;
     @BindView(R.id.circleIndicator) CircleIndicator circleIndicator;
@@ -141,9 +139,11 @@ public class SliderScreenActivity extends AppCompatActivity {
 
             viewPagerSlider.addOnPageChangeListener(onPageChangeListener);
         } else {
-            Intent i = new Intent(this, CheckNetworkActivity.class);
+
+            Intent i = new Intent(SliderScreenActivity.this, CheckNetworkActivity.class);
             startActivity(i);
             finish();
+            return;
         }
 
     }

@@ -31,14 +31,14 @@ public class CheckNetworkActivity extends AppCompatActivity {
 
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_check_network);
         ButterKnife.bind(this);
 
         if (isOnline()) {
-            Intent i = new Intent(this, LoginActivity.class);
+            Intent i = new Intent(CheckNetworkActivity.this, LoginActivity.class);
             startActivity(i);
             finish();
+            return;
         } else {
             tvNetwork.setText("Không có kết nối mạng. Vui lòng thử lại sau");
             pbNetwork.setVisibility(View.GONE);
@@ -54,7 +54,7 @@ public class CheckNetworkActivity extends AppCompatActivity {
 
     @OnClick(R.id.tvTryAgain)
     public void onViewClicked() {
-        Intent i = new Intent(this, CheckNetworkActivity.class);
+        Intent i = new Intent(CheckNetworkActivity.this, CheckNetworkActivity.class);
         startActivity(i);
         finish();
     }

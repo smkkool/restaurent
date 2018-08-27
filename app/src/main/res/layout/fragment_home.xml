@@ -100,11 +100,13 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_recommend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
                 android:text="Gợi ý cho bạn"
+                android:visibility="gone"
                 android:textColor="#000001"
                 android:textSize="15dp" />
 
@@ -118,11 +120,13 @@
                 tools:listitem="@layout/highlight" />
 
             <TextView
+                android:id="@+id/tvNearby"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:text="Quán ăn gần đây"
+                android:visibility="gone"
                 android:textColor="#000001"
                 android:textSize="15dp" />
 

@@ -1,9 +1,13 @@
 package com.minhpvn.restaurantsapp.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -24,6 +28,13 @@ import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.minhpvn.restaurantsapp.R;
 import com.minhpvn.restaurantsapp.ultil.MyBounceInterpolator;
 import com.minhpvn.restaurantsapp.ultil.PreferenceUtils;
@@ -37,12 +48,14 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String TAG = "eeeeeeeeeeeeeer";
     LoginButton loginButton;
     CallbackManager callbackManager;
     String email, birthday;
     @BindView(R.id.tv_radio_setting_login) TextView tvRadioSettingLogin;
     Animation pulseTop;
     Handler handler = new Handler();
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,66 +82,27 @@ public class LoginActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent);
             finish();
+            return;
         }
-
+        mAuth = FirebaseAuth.getInstance();
         callbackManager = CallbackManager.Factory.create();
-        loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions("email");
-        // If using in a fragment
-//        loginButton.setFragment(this);
 
 
-        // Callback registration
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                // App code
-                Log.d("onSuccess", loginResult + "");
-                GraphRequest.newMeRequest(
-                        loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
-                            @Override
-                            public void onCompleted(JSONObject me, GraphResponse response) {
-                                if (response.getError() != null) {
-                                    // handle error
-                                } else {
-                                    loginButton.setVisibility(View.GONE);
-                                    // get email and id of the user
-                                    String name = me.optString("name");
-                                    String id = me.optString("id");
-                                    PreferenceUtils.saveFBData(LoginActivity.this, name, id);
-
-                                    Bundle bundle = new Bundle();
-                                    bundle.putString("name", name);
-                                    bundle.putString("id", id);
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    intent.putExtras(bundle);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            }
-                        }).executeAsync();
+    }
 
 
-            }
-
-            @Override
-            public void onCancel() {
-                // App code
-                Log.d("onCancel", "");
-            }
-
-            @Override
-            public void onError(FacebookException exception) {
-                // App code
-                Log.d("onError", exception + "");
-            }
-        });
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        updateUI(currentUser);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @OnClick(R.id.tv_radio_setting_login)
@@ -152,35 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                     @Override
                     public void onSuccess(LoginResult loginResult) {
-                        tvRadioSettingLogin.clearAnimation();
-                        tvRadioSettingLogin.setBackground(getResources().getDrawable(R.drawable.bg_button_new_gradient_three));
-                        tvRadioSettingLogin.setText("Login Success");
-                        Toast.makeText(LoginActivity.this, "success", Toast.LENGTH_SHORT).show();
-                        // App code
-                        // App code
-                        GraphRequest.newMeRequest(
-                                loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
-                                    @Override
-                                    public void onCompleted(JSONObject me, GraphResponse response) {
-                                        if (response.getError() != null) {
-                                            // handle error
-                                        } else {
-                                            loginButton.setVisibility(View.GONE);
-                                            // get email and id of the user
-                                            String name = me.optString("name");
-                                            String id = me.optString("id");
-                                            PreferenceUtils.saveFBData(LoginActivity.this, name, id);
-
-                                            Bundle bundle = new Bundle();
-                                            bundle.putString("name", name);
-                                            bundle.putString("id", id);
-                                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                            intent.putExtras(bundle);
-                                            startActivity(intent);
-                                            finish();
-                                        }
-                                    }
-                                }).executeAsync();
+                        handleFacebookAccessToken(loginResult.getAccessToken());
                     }
 
                     @Override
@@ -195,5 +141,57 @@ public class LoginActivity extends AppCompatActivity {
                         // App code
                     }
                 });
+    }
+
+    private void handleFacebookAccessToken(AccessToken token) {
+        // [START_EXCLUDE silent]
+//        showProgressDialog();
+        // [END_EXCLUDE]
+
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithCredential:success");
+                            tvRadioSettingLogin.clearAnimation();
+                            tvRadioSettingLogin.setBackground(getResources().getDrawable(R.drawable.bg_button_new_gradient_three));
+                            tvRadioSettingLogin.setText("Login Success");
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            String name = user.getDisplayName();
+                            String id = user.getProviderId();
+
+
+                            PreferenceUtils.saveFBData(LoginActivity.this, name, id);
+
+                            Bundle bundle = new Bundle();
+                            bundle.putString("name", name);
+                            bundle.putString("id", id);
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                            finish();
+                            return;
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+//                            updateUI(null);
+                        }
+
+                    }
+                });
+    }
+
+    private boolean isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }

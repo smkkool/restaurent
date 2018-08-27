@@ -14,7 +14,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,11 +23,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.facebook.login.widget.ProfilePictureView;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.minhpvn.restaurantsapp.BaseFragment;
 import com.minhpvn.restaurantsapp.R;
 import com.minhpvn.restaurantsapp.fragment.adapter.HomeAdapter;
@@ -42,7 +48,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,6 +69,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
     //    @BindView(R.id.nestedScroll) NestedScrollView nestedScroll;
     @BindView(R.id.iv_loading) GifImageView ivLoading;
     @BindView(R.id.ln_loading) LinearLayout lnLoading;
+    @BindView(R.id.tv_recommend) TextView tvRecommend;
+    @BindView(R.id.tvNearby) TextView tvNearby;
     private HomeContract.Presenter mPresenter;
     private HomeAdapter homeAdapter;
     private HomeHighlightAdapter homeHighlightAdapter;
@@ -76,6 +86,9 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
     private List<String> linkPhoto = new ArrayList<>();
     String token = "";
     private Realm realm;
+    private DatabaseReference mDatabase;
+    private FirebaseUser firebaseUser;
+    private int itemHistory = 0;
 
     @Nullable
     @Override
@@ -93,6 +106,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
     }
 
     private void initViews() {
+        mDatabase = FirebaseDatabase.getInstance().getReference("item " + itemHistory);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         this.realm = RealmController.with(this).getRealm();
     }
 
@@ -140,8 +155,10 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
         swipeRefresh.setRefreshing(false);
         progressBar.setVisibility(View.GONE);
         lstResult.clear();
-
+        lstTop.clear();
         lnLoading.setVisibility(View.GONE);
+        tvNearby.setVisibility(View.VISIBLE);
+        tvRecommend.setVisibility(View.VISIBLE);
         if (response != null) {
             lstResult.addAll(response.body().getResults());
             lstTop.addAll(response.body().getResults());
@@ -155,14 +172,16 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
                 public int compare(Result o1, Result o2) {
                     if (o1.getRating() != null && o2.getRating() != null) {
                         double delta = o1.getRating() - o2.getRating();
-                        if (delta > 0) return 1;
-                        if (delta < 0) return -1;
+                        if (delta > 0.00001) return 1;
+                        if (delta < -0.00001) return -1;
+                        return 0;
+                    } else {
                         return 0;
                     }
 
-                    return 0;
                 }
             });
+//            lstResult.sort(Comparator.comparingDouble(Result::getRating).reversed());
             Collections.sort(lstResult, new SortPlaces(begin));
 
             for (int i = 0; i < lstResult.size(); i++) {
@@ -177,8 +196,10 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
         homeAdapter = new HomeAdapter(getApplicationContext(), lstResult, new HomeAdapter.OnItemClick() {
             @Override
             public void onClick(Result item) {
-//                ItemRestaurentDetail itemRestaurentDetail = new ItemRestaurentDetail();
-//                itemRestaurentDetail.show(getFragmentManager(), "itemRestaurentDetail");
+                itemHistory += 1;
+                mDatabase = FirebaseDatabase.getInstance().getReference("listHistorySearch").child("item" + itemHistory);
+                mDatabase.setValue(item);
+
                 Date date = new Date();
                 SaveMap saveMap = new SaveMap();
                 saveMap.setKm(item.getKm());
@@ -368,7 +389,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
         ft.setCustomAnimations(R.anim.pull_in_right, R.anim.push_out_left, R.anim.pull_in_left, R.anim.push_out_right);
         if (targetFragment != null) {
             ft.addToBackStack(null);
-            ft.add(R.id.container_home, targetFragment, tag).commitAllowingStateLoss();
+            ft.add(R.id.fl_container, targetFragment, tag).commitAllowingStateLoss();
         }
     }
 
