@@ -5,7 +5,7 @@
     android:id="@+id/container_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#eeeef3"
+    android:background="#192433"
     android:orientation="vertical">
 
 
@@ -20,8 +20,9 @@
         android:id="@+id/lnTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fdfdfe"
+        android:background="#192433"
         android:orientation="horizontal"
+        android:visibility="gone"
         android:padding="5dp">
 
         <com.facebook.login.widget.ProfilePictureView
@@ -42,14 +43,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phạm Vũ Ngọc Minh"
-                android:textColor="#242424"
+                android:textColor="#ffffff"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thành Viên Mới "
-                android:textColor="#2c2c2c" />
+                android:textColor="#ffffff" />
         </LinearLayout>
 
     </LinearLayout>
@@ -73,7 +74,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#eeeef3"
+            android:background="#192433"
             android:orientation="vertical">
 
             <LinearLayout
@@ -94,6 +95,7 @@
                     android:visibility="visible" />
 
                 <TextView
+                    android:textColor="#ffffff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cập nhật vị trí ..." />
@@ -107,7 +109,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Gợi ý cho bạn"
                 android:visibility="gone"
-                android:textColor="#000001"
+                android:textColor="#ffffff"
                 android:textSize="15dp" />
 
             <android.support.v7.widget.RecyclerView
@@ -116,6 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:nestedScrollingEnabled="false"
+                android:visibility="visible"
                 app:layoutManager="android.support.v7.widget.LinearLayoutManager"
                 tools:listitem="@layout/highlight" />
 
@@ -127,7 +130,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Quán ăn gần đây"
                 android:visibility="gone"
-                android:textColor="#000001"
+                android:textColor="#ffffff"
                 android:textSize="15dp" />
 
             <android.support.v7.widget.RecyclerView

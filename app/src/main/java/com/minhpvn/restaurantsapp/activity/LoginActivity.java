@@ -23,8 +23,6 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -38,8 +36,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.minhpvn.restaurantsapp.R;
 import com.minhpvn.restaurantsapp.ultil.MyBounceInterpolator;
 import com.minhpvn.restaurantsapp.ultil.PreferenceUtils;
-
-import org.json.JSONObject;
 
 import java.util.Arrays;
 
@@ -55,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.tv_radio_setting_login) TextView tvRadioSettingLogin;
     Animation pulseTop;
     Handler handler = new Handler();
+    @BindView(R.id.tvErr) TextView tvErr;
     private FirebaseAuth mAuth;
 
     @Override
@@ -67,6 +64,10 @@ public class LoginActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        if (!isOnline()) {
+            tvErr.setVisibility(View.VISIBLE);
+            return;
+        }
         MyBounceInterpolator interpolator = new MyBounceInterpolator(0.1, 30);
 
         pulseTop = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
@@ -95,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
 //        updateUI(currentUser);
     }
 
@@ -194,4 +195,5 @@ public class LoginActivity extends AppCompatActivity {
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
+
 }

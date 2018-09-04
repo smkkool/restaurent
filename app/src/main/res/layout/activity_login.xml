@@ -48,9 +48,9 @@
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
-        android:layout_gravity="center_horizontal"
         android:background="@drawable/bg_button_new_gradient_two"
         android:drawablePadding="14dp"
         android:foreground="?android:attr/selectableItemBackground"
@@ -61,4 +61,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/tvErr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="errrrrrrrrrrr"
+        android:visibility="gone" />
 </RelativeLayout>

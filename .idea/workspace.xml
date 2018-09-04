@@ -14,31 +14,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27311ceb-2661-4f25-8209-4fb6f7075c09" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_flags_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_16_0_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_16_0_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_16_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_16_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_collection_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_connection_16_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/raw/map_type.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_background.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikepenz_fastadapter_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikepenz_fastadapter_commons_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikepenz_fastadapter_extensions_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_mikepenz_materialize_1_0_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
@@ -50,54 +35,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_answers_1_4_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_beta_1_2_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_beta_1_2_10.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_9_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_2_9_5.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_core_2_6_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_crashlytics_sdk_android_crashlytics_core_2_6_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_15_0_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_16_0_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_16_0_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_16_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_16_2_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_16_0_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_16_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_16_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_impl_17_0_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_fabric_sdk_android_fabric_1_4_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_fabric_sdk_android_fabric_1_4_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_1.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Git restaurent.iml" afterPath="$PROJECT_DIR$/Git restaurent.iml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_red.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_red.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_container.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_container.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_map_place.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_map_place.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/reward.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/reward.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/map_type.json" afterPath="$PROJECT_DIR$/app/src/main/res/raw/map_type.json" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,21 +94,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CheckNetworkActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java">
+      <file leaf-file-name="APIInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/APIInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="567">
+              <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SliderScreenActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java">
+      <file leaf-file-name="ApiClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="184" column="44" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
+            <state relative-caret-position="702">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurentPresenter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1728">
+              <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurentFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2133">
+              <caret line="156" column="53" lean-forward="false" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
+              <folding>
+                <element signature="e#6091#6092#0" expanded="true" />
+                <element signature="e#6137#6138#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoogleMapPlaceAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/GoogleMapPlaceAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="46" column="56" lean-forward="false" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/UserList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2187">
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_maps.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="331" column="31" lean-forward="true" selection-start-line="331" selection-start-column="31" selection-end-line="331" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -162,36 +192,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LocationListener</find>
-      <find>mMap</find>
-      <find>onmapready</find>
-      <find>OnMapClickListener</find>
+      <find>onstart</find>
+      <find>positionLast</find>
+      <find>material</find>
+      <find>d.support:suppor</find>
+      <find>FastAdapter</find>
+      <find>FastItemAdapter</find>
+      <find>rcv1</find>
+      <find>rcv1.set</find>
+      <find>homeadap</find>
+      <find>.json</find>
+      <find>hideInfo</find>
       <find>onmapclick</find>
-      <find>markerop</find>
+      <find>cập</find>
+      <find>quắnn</find>
+      <find>onclick</find>
+      <find>destination</find>
+      <find>infoLayout</find>
+      <find>type</find>
       <find>onmarkerclick</find>
-      <find>showInfo</find>
-      <find>&quot;mode</find>
-      <find>mPresenter</find>
-      <find>longclick</find>
-      <find>onMapClick</find>
-      <find>decodePoly</find>
-      <find>api_</find>
-      <find>getOverviewPolyline</find>
-      <find>onlo</find>
-      <find>bottom</find>
-      <find>line</find>
-      <find>replace</find>
-      <find>.add</find>
-      <find>mMap.</find>
-      <find>markeroption</find>
-      <find>marker</find>
-      <find>marker.</find>
-      <find>cameramove</find>
-      <find>camer</find>
-      <find>move</find>
-      <find>camera</find>
-      <find>cameraz</find>
-      <find>.add(</find>
+      <find>startDropMarkerAnimation</find>
+      <find>success</find>
+      <find>shiftm</find>
+      <find>RestaurentPresenter</find>
+      <find>adapter</find>
+      <find>chỉ đườn</find>
+      <find>gone</find>
+      <find>gọi điện</find>
+      <find>btn_show_direction</find>
+      <find>ú</find>
+      <find>btnShowDirection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2411,11 +2441,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_three.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Example2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Photo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/BaseFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ratingbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_five.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/Toolbox.java" />
@@ -2425,51 +2450,75 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ItemRestaurentDetail.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_red.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HomeHighlightAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_restaurent_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HomeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomePresenter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/APIInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/highlight.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/reward.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/DeliveryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_delivery.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HistoryAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/realmObject/SaveMap.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/RealmController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_container.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HistoryFragment.java" />
         <option value="$PROJECT_DIR$/app/map_type.json" />
-        <option value="$PROJECT_DIR$/app/src/main/res/raw/map_type.json" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/google-services.json" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/gradle.properties" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HomeAdapter.java" />
+        <option value="$PROJECT_DIR$/app/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_red.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/raw/map_type.json" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/reward.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_container.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_map_place.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="343" />
-    <option name="y" value="58" />
+    <option name="x" value="865" />
+    <option name="y" value="76" />
     <option name="width" value="1938" />
     <option name="height" value="1060" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>XmlUnusedNamespaceDeclaration</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -2489,55 +2538,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="restaurantsapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="restaurantsapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="fragment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="restaurantsapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="fragment" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2548,69 +2548,6 @@
             <path>
               <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
               <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-              <item name="fileChanges" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-              <item name="fileContent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-              <item name="fileHashes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-              <item name="javaCompile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="4.4" type="462c0819:PsiDirectoryNode" />
-              <item name="taskHistory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
-              <item name="buildOutputCleanup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="caches" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -2618,54 +2555,6 @@
               <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="androidTest" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantsapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="debug" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
@@ -2690,27 +2579,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restaurantsapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="activity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurantsapp" type="462c0819:PsiDirectoryNode" />
-              <item name="activity" type="462c0819:PsiDirectoryNode" />
-              <item name="SliderScreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
@@ -2747,85 +2615,61 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-anydpi-v26" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-hdpi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-mdpi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-xhdpi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-xxhdpi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="mipmap-xxxhdpi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="raw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Git restaurent" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Android API 28 Platform &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values-h720dp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Git restaurent" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -2833,9 +2677,9 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="E:/Lib Android/PageTransformerDemo-master/PageTransformerDemo-master" />
+    <property name="last_opened_file_path" value="E:/Lib Android/Android-TensorFlow-Lite-Example-master/Android-TensorFlow-Lite-Example-master" />
     <property name="device.picker.selection" value="463720a30404" />
-    <property name="SearchEverywhereHistoryKey" value="check&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java&#10;homef&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;ho&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;res&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;bui&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/build.gradle&#10;buil&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;homefra&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.fragment.HomeFragment&#10;mani&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/AndroidManifest.xml&#10;ma&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;my&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;mya&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;build&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;log&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;app&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;bu&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;loginac&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;home&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;main&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java&#10;con&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.fragment.ContainerFragment&#10;mainac&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java&#10;checknet&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.activity.CheckNetworkActivity&#10;conta&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java&#10;login&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;hom&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;build.&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/build.gradle&#10;build.g&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;homefrag&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;build.gra&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;contain&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java&#10;restau&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;his&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HistoryFragment.java&#10;save&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/model/realmObject/SaveMap.java&#10;rew&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/reward.xml&#10;contai&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java&#10;menu&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/menu/menu_main.xml&#10;reward&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/reward.xml&#10;h&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;re&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;resta&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;frag&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_home.xml&#10;ba&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/BaseActivity.java&#10;co&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java&#10;fragment_&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_home.xml&#10;baseac&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/BaseActivity.java&#10;high&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/highlight.xml&#10;fra&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_home.xml&#10;st&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/values/styles.xml&#10;rewar&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/reward.xml&#10;man&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/AndroidManifest.xml&#10;base&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/BaseActivity.java" />
+    <property name="SearchEverywhereHistoryKey" value="bui&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;userli&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.model.UserList&#10;restaurent_ite&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/detail_restaurent_item.xml&#10;restaurent&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_restaurent.xml&#10;resta&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java&#10;presenter&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java&#10;dimen&#9;FILE&#9;file://C:/Users/smkko/AppData/Local/Android/Sdk/platforms/android-28/data/res/values-h720dp/dimens.xml&#10;contai&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_container.xml&#10;homefra&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.fragment.HomeFragment&#10;hom&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;res&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;resu&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java&#10;re&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/reward.xml&#10;home&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_home.xml&#10;restau&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java&#10;co&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_container.xml&#10;main&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/activity_main.xml&#10;h&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_home.xml&#10;container&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/res/layout/fragment_container.xml&#10;prog&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/proguard-rules.pro&#10;result&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java&#10;homea&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HomeAdapter.java&#10;api&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/APIInterface.java&#10;build&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;app&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;gradle.pro&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/gradle.properties&#10;build.&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/build.gradle&#10;buil&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;man&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/AndroidManifest.xml&#10;build.gr&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;chec&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java&#10;check&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java&#10;homef&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;ho&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;mani&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/AndroidManifest.xml&#10;ma&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;my&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;mya&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java&#10;log&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;bu&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;loginac&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;con&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.fragment.ContainerFragment&#10;mainac&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java&#10;checknet&#9;PSI&#9;JAVA://com.minhpvn.restaurantsapp.activity.CheckNetworkActivity&#10;conta&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java&#10;login&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java&#10;build.g&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;homefrag&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java&#10;build.gra&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/build.gradle&#10;contain&#9;FILE&#9;file://E:/Project/MYPROJECT/Git restaurent/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java" />
     <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_4-463720a30404" />
     <property name="DEBUGGABLE_PROCESS" value="com.minhpvn.restaurantsapp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2848,11 +2692,11 @@
       <recent name="com.minhpvn.restaurantsapp.fragment.adapter" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\MYPROJECT\Git restaurent\app\src\main\res\values" />
       <recent name="E:\Project\MYPROJECT\Git restaurent\app" />
       <recent name="E:\Project\MYPROJECT\Git restaurent\app\src\main\res\raw" />
       <recent name="E:\Project\MYPROJECT\Git restaurent\app\src\main\res\drawable" />
       <recent name="E:\Project\MYPROJECT\Git restaurent\app\src\main\res\anim" />
-      <recent name="E:\Project\MYPROJECT\Git restaurent\app\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3042,15 +2886,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29336438" sideWeight="0.23254564" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31095597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3058,14 +2902,13 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556391" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23361976" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3247963" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.4959255" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5040745" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26426077" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26456878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3073,7 +2916,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31095597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3129,39 +2972,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java</url>
-          <line>438</line>
+          <line>443</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>276</line>
+          <line>262</line>
           <properties />
           <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>118</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>117</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>119</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>195</line>
-          <properties />
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomePresenter.java</url>
@@ -3182,56 +3001,50 @@
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>209</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>121</line>
+          <line>122</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>123</line>
+          <line>124</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>117</line>
+          <line>118</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>76</line>
+          <line>77</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>181</line>
+          <line>182</line>
           <properties />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>97</line>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>86</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>87</line>
+          <line>88</line>
           <properties />
           <option name="timeStamp" value="86" />
         </line-breakpoint>
@@ -3273,19 +3086,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>128</line>
+          <line>129</line>
           <properties />
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>163</line>
+          <line>164</line>
           <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java</url>
-          <line>165</line>
+          <line>166</line>
           <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
@@ -3309,18 +3122,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>108</line>
+          <line>109</line>
           <properties />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java</url>
-          <line>95</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java</url>
+          <line>558</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java</url>
+          <line>572</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java</url>
+          <line>561</line>
+          <properties />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java</url>
+          <line>824</line>
+          <properties />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="108" />
+      <option name="time" value="112" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
@@ -3329,208 +3166,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foregroundmm.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foregroundmm.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foregroundmm.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foregroundmm.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/ic_launcher-web.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/view/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_check_network.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e3998934ea2721fba96f53b0068e08e0/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1714" column="4" lean-forward="false" selection-start-line="1714" selection-start-column="4" selection-end-line="1714" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/content/Intent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="3916" column="31" lean-forward="false" selection-start-line="3916" selection-start-column="31" selection-end-line="3916" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2241">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_background.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d37f9d5d33789c8400a4e89f5c94c7d2/jars/classes.jar!/com/google/android/gms/location/LocationServices.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/d37f9d5d33789c8400a4e89f5c94c7d2/jars/classes.jar!/com/google/android/gms/location/FusedLocationProviderApi.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        <state relative-caret-position="594">
+          <caret line="63" column="42" lean-forward="false" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -3540,141 +3179,412 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/APIInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/3564ebef90ac75e61ed65ab9af0f422ce92d4afa/retrofit-2.1.0-sources.jar!/retrofit2/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="120" column="11" lean-forward="false" selection-start-line="120" selection-start-column="11" selection-end-line="120" selection-end-column="11" />
+        <state relative-caret-position="39">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
           <folding>
-            <element signature="e#4136#4137#0" expanded="false" />
-            <element signature="e#4157#4158#0" expanded="false" />
+            <element signature="e#3746#3771#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapModel/Example.java">
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/e3998934ea2721fba96f53b0068e08e0/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="250" column="4" lean-forward="false" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java">
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0-rc01.aar/c7679e694b2fcaa9849a6bd036f6fc82/res/values-v28/values-v28.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="7" column="53" lean-forward="false" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/minhpvn/restaurantsapp/ExampleInstrumentedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="39" lean-forward="true" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="216">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
+        <state relative-caret-position="945">
           <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fastadapter-commons-3.3.0-rc01.aar/014dd38f461c338036adc88d0fb8e1fa/jars/classes.jar!/com/mikepenz/fastadapter/commons/adapters/FastItemAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.0.0-rc01/bb1c2a507570b0637ea921fb4de536f67d195b0d/recyclerview-1.0.0-rc01-sources.jar!/androidx/recyclerview/widget/RecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32184">
+          <caret line="1308" column="16" lean-forward="false" selection-start-line="1308" selection-start-column="16" selection-end-line="1308" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentContract.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/fastadapter/1.5.2/cc42280b6eb126d390211983e7d9944aa86e353c/fastadapter-1.5.2-sources.jar!/com/mikepenz/fastadapter/FastAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="-2484">
+          <caret line="367" column="0" lean-forward="false" selection-start-line="367" selection-start-column="0" selection-end-line="367" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/HomeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="85" column="52" lean-forward="true" selection-start-line="85" selection-start-column="52" selection-end-line="85" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-777">
+          <caret line="108" column="17" lean-forward="false" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="195" column="51" lean-forward="false" selection-start-line="195" selection-start-column="51" selection-end-line="195" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/fastadapter/2.6.3/66b4eef1d144b57e5fc497ee484e5af36a8fed7b/fastadapter-2.6.3-sources.jar!/com/mikepenz/fastadapter/FastAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="1882" column="22" lean-forward="true" selection-start-line="1882" selection-start-column="22" selection-end-line="1882" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/realmObject/SaveMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/highlight.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/map_type.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/nav_item_color_state.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/googleMapNearby/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="220" column="13" lean-forward="false" selection-start-line="220" selection-start-column="13" selection-end-line="220" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/reward.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="63" column="12" lean-forward="false" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/bg_new_gradient_red.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/RealmController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1009">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/PreferenceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/MyBounceInterpolator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9747">
+          <caret line="423" column="32" lean-forward="false" selection-start-line="423" selection-start-column="32" selection-end-line="423" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/ContainerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="1350">
+          <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/Toolbox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="80" column="16" lean-forward="true" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+        <state relative-caret-position="837">
+          <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/data/res/values-h720dp/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_container.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/lang/Cloneable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/3564ebef90ac75e61ed65ab9af0f422ce92d4afa/retrofit-2.1.0-sources.jar!/retrofit2/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#382#383#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/APIInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/detail_restaurent_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_restaurent.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/adapter/GoogleMapPlaceAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="46" column="56" lean-forward="false" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_map_place.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/model/UserList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="75" column="42" lean-forward="false" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/ultil/ApiClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2187">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/RestaurentFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1779">
-          <caret line="833" column="24" lean-forward="false" selection-start-line="833" selection-start-column="24" selection-end-line="833" selection-end-column="24" />
+        <state relative-caret-position="2133">
+          <caret line="156" column="53" lean-forward="false" selection-start-line="156" selection-start-column="53" selection-end-line="156" selection-end-column="53" />
           <folding>
-            <element signature="e#27405#27413#0" expanded="true" />
+            <element signature="e#6091#6092#0" expanded="true" />
+            <element signature="e#6137#6138#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/fragment/HomeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="71" column="45" lean-forward="true" selection-start-line="71" selection-start-column="45" selection-end-line="71" selection-end-column="45" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/CheckNetworkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/minhpvn/restaurantsapp/activity/SliderScreen/SliderScreenActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="184" column="44" lean-forward="false" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
+        <state relative-caret-position="884">
+          <caret line="331" column="31" lean-forward="true" selection-start-line="331" selection-start-column="31" selection-end-line="331" selection-end-column="31" />
           <folding />
         </state>
       </provider>

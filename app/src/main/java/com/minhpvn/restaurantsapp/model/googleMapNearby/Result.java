@@ -1,11 +1,26 @@
 
 package com.minhpvn.restaurantsapp.model.googleMapNearby;
 
-import java.util.List;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.mikepenz.fastadapter.items.AbstractItem;
+import com.mikepenz.materialize.util.UIUtils;
+import com.minhpvn.restaurantsapp.R;
 
-public class Result {
+import java.util.List;
+
+import butterknife.ButterKnife;
+
+public class Result extends AbstractItem<Result, Result.ViewHolder> {
 
     @SerializedName("geometry")
     @Expose
@@ -161,4 +176,84 @@ public class Result {
         this.priceLevel = priceLevel;
     }
 
+
+    @Override
+    public int getType() {
+        return 0;
+    }
+
+    @Override
+    public int getLayoutRes() {
+        return R.layout.reward;
+    }
+
+
+//    @Override
+//    public void bindView(ViewHolder holder, List<Object> payloads) {
+//        super.bindView(holder, payloads);
+//    }
+
+    @SuppressLint("NewApi")
+    @Override
+    public void bindView(ViewHolder holder, List<Object> payloads) {
+        super.bindView(holder, payloads);
+
+        Context ctx = holder.itemView.getContext();
+
+        //set the background for the item
+        int color = UIUtils.getThemeColor(ctx, R.attr.colorPrimary);
+
+        holder.view.clearAnimation();
+        holder.view.setForeground(UIUtils.getSelectablePressedBackground(ctx, UIUtils.adjustAlpha(color, 100), 50, true));
+
+
+        holder.tvName.setText(name);
+        holder.tvAddress.setText(vicinity);
+        if (openingHours != null) {
+            if (openingHours.getOpenNow() != null) {
+                if (openingHours.getOpenNow()) {
+                    holder.tvActive.setText("Đang mở cửa");
+                    holder.tvActive.setTextColor(ctx.getColor(R.color.color_active));
+                } else {
+                    holder.tvActive.setText("Đóng cửa");
+                    holder.tvActive.setTextColor(ctx.getColor(R.color.color_deactive));
+                }
+            }
+        } else {
+            holder.tvActive.setText("Đóng cửa");
+            holder.tvActive.setTextColor(ctx.getColor(R.color.color_deactive));
+        }
+        if (rating != null) {
+            holder.rbRatingBar.setRating(Float.parseFloat(rating.toString()));
+        }
+
+        holder.tvKm.setText(km.intValue() + " m");
+    }
+
+    @Override
+    public ViewHolder getViewHolder(View v) {
+        return new ViewHolder(v);
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        protected FrameLayout view;
+        protected ImageView imageView;
+        protected TextView tvName;
+        protected TextView tvAddress;
+        protected TextView tvActive;
+        protected RatingBar rbRatingBar;
+        protected TextView tvKm;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            this.view = (FrameLayout) itemView;
+            this.imageView = itemView.findViewById(R.id.img);
+            this.tvName = itemView.findViewById(R.id.tvName);
+            this.tvAddress = itemView.findViewById(R.id.tvAddress);
+            this.tvActive = itemView.findViewById(R.id.tvActive);
+            this.rbRatingBar = itemView.findViewById(R.id.rbRatingBar);
+            this.tvKm = itemView.findViewById(R.id.tvKm);
+        }
+    }
 }

@@ -49,7 +49,6 @@
             android:id="@+id/sub_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Điểm cung cấp, xử lý các yêu cầu của khách hàng về sản phẩm, dịch vụ Viettel."
             android:textColor="#b6b6b6"
             android:textSize="13dp" />
     </LinearLayout>

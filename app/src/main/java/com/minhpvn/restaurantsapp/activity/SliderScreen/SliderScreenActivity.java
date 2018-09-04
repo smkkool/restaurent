@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.minhpvn.restaurantsapp.R;
-import com.minhpvn.restaurantsapp.activity.CheckNetworkActivity;
+import com.minhpvn.restaurantsapp.activity.LoginActivity;
 import com.minhpvn.restaurantsapp.ultil.PreferenceUtils;
 
 import butterknife.BindView;
@@ -140,7 +140,7 @@ public class SliderScreenActivity extends AppCompatActivity {
             viewPagerSlider.addOnPageChangeListener(onPageChangeListener);
         } else {
 
-            Intent i = new Intent(SliderScreenActivity.this, CheckNetworkActivity.class);
+            Intent i = new Intent(SliderScreenActivity.this, LoginActivity.class);
             startActivity(i);
             finish();
             return;
@@ -182,7 +182,7 @@ public class SliderScreenActivity extends AppCompatActivity {
     @OnClick(R.id.tvNext)
     public void onViewClicked() {
         PreferenceUtils.saveStartApp(this);
-        Intent i = new Intent(this, CheckNetworkActivity.class);
+        Intent i = new Intent(this, LoginActivity.class);
         startActivity(i);
         finish();
     }

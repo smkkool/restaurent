@@ -3,11 +3,11 @@ apply plugin: 'realm-android'
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.firebase.firebase-perf'
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.minhpvn.restaurantsapp"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -79,5 +79,15 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'
 
     implementation 'com.google.firebase:firebase-core:16.0.3'
+
+    // Fast Adapter
+    implementation 'com.mikepenz:fastadapter:2.6.3@aar'
+
+    implementation 'com.mikepenz:fastadapter-commons:2.6.3@aar'
+
+    implementation 'com.mikepenz:fastadapter-extensions:2.6.3@aar'
+
+    implementation 'com.mikepenz:materialize:1.0.3@aar'
+
 }
 apply plugin: 'com.google.gms.google-services'

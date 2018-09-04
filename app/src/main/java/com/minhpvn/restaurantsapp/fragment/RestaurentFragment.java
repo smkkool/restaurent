@@ -3,6 +3,7 @@ package com.minhpvn.restaurantsapp.fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -10,6 +11,7 @@ import android.graphics.Point;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -125,6 +127,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
     private List<QueryAddressResponse.Predictions> listData = new ArrayList<>();
     private GoogleMapPlaceAdapter googleMapPlaceAdapter;
     LatLng currentPoint;
+    LatLng center;
+    private
     ContainerFragment containerFragment;
     Animation animationbbb, fadeIn, fadeOut;
     boolean isShow = true;
@@ -179,7 +183,12 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         btnShowDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPresenter.directByCar("", begin, des, "");
+                String query = "";
+                query = infoTitle.getText().toString();
+//                mPresenter.directByCar("", begin, des, "");
+                Uri uri = Uri.parse("https://www.google.com/search?q=" + query);
+                Intent gSearchIntent = new Intent(Intent.ACTION_VIEW, uri);
+                Objects.requireNonNull(getActivity()).startActivity(gSearchIntent);
             }
         });
 
@@ -298,12 +307,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 //        mMap.setMapType(MAP_TYPE_TERRAIN);
         mMap.setTrafficEnabled(true);
         pinLocation.setVisibility(View.VISIBLE);
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-
-            }
-        });
+        mMap.setOnMapClickListener(this);
         mMap.setOnMapLongClickListener(this);
         mMap.setOnMarkerClickListener(this);
 
@@ -359,6 +363,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (LocationListener) this);
+
         }
     }
 
@@ -570,7 +575,7 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @Override
     public void onMapLongClick(LatLng latLng) {
-
+//        latlng=map.getProjection().getVisibleRegion().latLngBounds.getCenter();
     }
 
     @Override
@@ -641,12 +646,30 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
         markerOptions.snippet(address);
         markerOptions.position(new LatLng(destination.latitude, destination.longitude));
 
-        mMap.addMarker(markerOptions);
+        Marker marker;
+        marker = mMap.addMarker(markerOptions);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(begin).zoom(20).tilt(30).build();
+                .target(destination).zoom(20).tilt(30).build();
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 400, null);
 
+        String title = "";
+        String phone = "";
+        String type = "";
+        try {
+            String arr[] = marker.getTitle().split("\\|");
+            type = arr[0];
+            title = arr[1];
+            phone = arr[2];
+        } catch (Exception ignored) {
+        }
+
+
+        infoTitle.setText(type);
+        infoAddress.setText(marker.getSnippet());
+
+        showInfo();
+        startDropMarkerAnimation(marker);
 
     }
 
@@ -840,7 +863,8 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
             }
             isShow = false;
         }
-
+        center = mMap.getCameraPosition().target;
+        Log.d("centerrr", center.latitude + ',' + center.longitude + "");
     }
 
     @Override
@@ -865,6 +889,6 @@ public class RestaurentFragment extends BaseFragment implements OnMapReadyCallba
 
     @OnClick(R.id.ivClose)
     public void onViewClicked() {
-      Objects.requireNonNull(getActivity()).onBackPressed();
+        Objects.requireNonNull(getActivity()).onBackPressed();
     }
 }

@@ -274,7 +274,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
-                android:text="Điểm cung cấp, xử lý các yêu cầu của khách hàng về sản phẩm, dịch vụ Viettel."
                 android:textColor="#7e7f7f"
                 android:textSize="13dp" />
 
@@ -292,7 +291,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="10dp">
+                    android:padding="10dp"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -312,7 +312,7 @@
                     android:id="@+id/btn_show_direction"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:padding="10dp">
@@ -326,7 +326,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Chỉ đường"
+                        android:text="Tìm thêm thông tin"
                         android:textColor="#17adb0"
                         android:textSize="15dp" />
                 </LinearLayout>

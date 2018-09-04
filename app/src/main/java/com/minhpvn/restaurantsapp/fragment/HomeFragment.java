@@ -1,6 +1,7 @@
 package com.minhpvn.restaurantsapp.fragment;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
@@ -30,27 +31,24 @@ import com.facebook.login.widget.ProfilePictureView;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter;
 import com.minhpvn.restaurantsapp.BaseFragment;
 import com.minhpvn.restaurantsapp.R;
-import com.minhpvn.restaurantsapp.fragment.adapter.HomeAdapter;
 import com.minhpvn.restaurantsapp.fragment.adapter.HomeHighlightAdapter;
 import com.minhpvn.restaurantsapp.model.googleMapNearby.Example2;
 import com.minhpvn.restaurantsapp.model.googleMapNearby.Result;
 import com.minhpvn.restaurantsapp.model.realmObject.SaveMap;
 import com.minhpvn.restaurantsapp.ultil.RealmController;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -66,29 +64,32 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
     @BindView(R.id.progress_bar) ProgressBar progressBar;
     @BindView(R.id.rcv2) RecyclerView rcv2;
     @BindView(R.id.swipeRefresh) SwipeRefreshLayout swipeRefresh;
-    //    @BindView(R.id.nestedScroll) NestedScrollView nestedScroll;
     @BindView(R.id.iv_loading) GifImageView ivLoading;
     @BindView(R.id.ln_loading) LinearLayout lnLoading;
     @BindView(R.id.tv_recommend) TextView tvRecommend;
     @BindView(R.id.tvNearby) TextView tvNearby;
+
+    public static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 1234;
+    private long mLastClickTime;
+    private int itemHistory = 0, positionLast, positionStart = 0;
+
     private HomeContract.Presenter mPresenter;
-    private HomeAdapter homeAdapter;
+    private FastItemAdapter<Result> adapter;
     private HomeHighlightAdapter homeHighlightAdapter;
-    LatLng begin;
+    private LatLng begin;
     private LocationManager locationManager;
     private String provider;
-    public static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 1234;
     private Criteria criteria;
     private Location location2;
     private List<Result> lstResult = new ArrayList<>();
     private List<Result> lstTop = new ArrayList<>();
     private List<Result> lstHighlight = new ArrayList<>();
     private List<String> linkPhoto = new ArrayList<>();
-    String token = "";
+    private String token = "";
     private Realm realm;
     private DatabaseReference mDatabase;
     private FirebaseUser firebaseUser;
-    private int itemHistory = 0;
+
 
     @Nullable
     @Override
@@ -112,13 +113,10 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
     }
 
     private void initControls() {
-        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeRefresh.setRefreshing(true);
-                progressBar.setVisibility(View.VISIBLE);
-                getLocation();
-            }
+        swipeRefresh.setOnRefreshListener(() -> {
+            swipeRefresh.setRefreshing(true);
+            progressBar.setVisibility(View.VISIBLE);
+            getLocation();
         });
     }
 
@@ -145,43 +143,38 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
         }
     }
 
-    int positionLast, positionStart = 0;
 
     @Override
     public void getNearbyPlacesSuccess(final Response<Example2> response) {
-//        nestedScroll.fullScroll(View.FOCUS_UP);
-//        nestedScroll.smoothScrollTo(0, 0);
+        lstResult.clear();
+        lstTop.clear();
+
         rcv1.smoothScrollToPosition(0);
         swipeRefresh.setRefreshing(false);
         progressBar.setVisibility(View.GONE);
-        lstResult.clear();
-        lstTop.clear();
+
         lnLoading.setVisibility(View.GONE);
         tvNearby.setVisibility(View.VISIBLE);
         tvRecommend.setVisibility(View.VISIBLE);
+
         if (response != null) {
             lstResult.addAll(response.body().getResults());
             lstTop.addAll(response.body().getResults());
             token = response.body().getNextPageToken();
         }
 
-
         if (begin != null) {
-            Collections.sort(lstTop, new Comparator<Result>() {
-                @Override
-                public int compare(Result o1, Result o2) {
-                    if (o1.getRating() != null && o2.getRating() != null) {
-                        double delta = o1.getRating() - o2.getRating();
-                        if (delta > 0.00001) return 1;
-                        if (delta < -0.00001) return -1;
-                        return 0;
-                    } else {
-                        return 0;
-                    }
-
+            Collections.sort(lstTop, (o1, o2) -> {
+                if (o1.getRating() != null && o2.getRating() != null) {
+                    double delta = o1.getRating() - o2.getRating();
+                    if (delta > 0.00001) return 1;
+                    if (delta < -0.00001) return -1;
+                    return 0;
+                } else {
+                    return 0;
                 }
+
             });
-//            lstResult.sort(Comparator.comparingDouble(Result::getRating).reversed());
             Collections.sort(lstResult, new SortPlaces(begin));
 
             for (int i = 0; i < lstResult.size(); i++) {
@@ -192,82 +185,75 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
             }
         }
 
-
-        homeAdapter = new HomeAdapter(getApplicationContext(), lstResult, new HomeAdapter.OnItemClick() {
-            @Override
-            public void onClick(Result item) {
-                itemHistory += 1;
-                mDatabase = FirebaseDatabase.getInstance().getReference("listHistorySearch").child("item" + itemHistory);
-                mDatabase.setValue(item);
-
-                Date date = new Date();
-                SaveMap saveMap = new SaveMap();
-                saveMap.setKm(item.getKm());
-                saveMap.setDescription(item.getVicinity());
-//                saveMap.setLatLng(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
-                saveMap.setName(item.getName());
-                saveMap.setDate(date.toString());
-                if (item.getOpeningHours() != null)
-                    saveMap.setOpen(item.getOpeningHours().getOpenNow() != null ? item.getOpeningHours().getOpenNow() : false);
-                if (item.getRating() != null)
-                    saveMap.setStar(item.getRating());
-                realm.beginTransaction();
-                realm.copyToRealm(saveMap);
-                realm.commitTransaction();
-                RestaurentFragment restaurentFragment = new RestaurentFragment();
-                restaurentFragment.setDestination(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
-                restaurentFragment.setData(item.getName(), item.getVicinity());
-                addFragmentWithTag(restaurentFragment, "RestaurentFragment");
+        adapter = new FastItemAdapter<>();
+        adapter.withOnClickListener((v, adapter, item, position) -> {
+            long now = System.currentTimeMillis();
+            if (now - mLastClickTime < 1000) {
+                return false;
             }
+            mLastClickTime = now;
+
+            Date date = new Date();
+
+            @SuppressLint("SimpleDateFormat")
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:s");
+
+            String strDate = dateFormat.format(date);
+            itemHistory += 1;
+            mDatabase = FirebaseDatabase.getInstance().getReference("listHistorySearch").child(strDate);
+            mDatabase.setValue(item);
+
+            SaveMap saveMap = new SaveMap();
+            saveMap.setKm(item.getKm());
+            saveMap.setDescription(item.getVicinity());
+            saveMap.setName(item.getName());
+            saveMap.setDate(strDate);
+
+            if (item.getOpeningHours() != null)
+                saveMap.setOpen(item.getOpeningHours().getOpenNow() != null ? item.getOpeningHours().getOpenNow() : false);
+
+            if (item.getRating() != null)
+                saveMap.setStar(item.getRating());
+
+            realm.beginTransaction();
+            realm.copyToRealm(saveMap);
+            realm.commitTransaction();
+
+            RestaurentFragment restaurentFragment = new RestaurentFragment();
+            restaurentFragment.setDestination(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
+            restaurentFragment.setData(item.getName(), item.getVicinity());
+            addFragmentWithTag(restaurentFragment, "RestaurentFragment");
+
+            return true;
         });
-        rcv1.setAdapter(homeAdapter);
+        rcv1.setAdapter(adapter);
+        adapter.add(lstResult);
+
 
         rcv1.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-        rcv1.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-
-                positionLast = ((LinearLayoutManager) recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
-                positionStart = ((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
-                Log.d("AbcpositionStart", positionStart + "");
-                Log.d("AbcpositionLast", positionLast + "");
-                if (positionLast == lstResult.size() - 1) {
-//                    mPresenter.getNearbyPlaces("restaurant", begin.latitude + "," + begin.longitude, 500, token);
-                }
-            }
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-        });
 
         List<Result> x = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             x.add(lstTop.get(i));
         }
-        homeHighlightAdapter = new HomeHighlightAdapter(getApplicationContext(), x, new HomeHighlightAdapter.OnItemClick() {
-            @Override
-            public void onClick(Result item) {
-                SaveMap saveMap = new SaveMap();
-                saveMap.setKm(item.getKm());
-                saveMap.setDescription(item.getVicinity());
-//                saveMap.setLatLng(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
-                saveMap.setName(item.getName());
+        homeHighlightAdapter = new HomeHighlightAdapter(getApplicationContext(), x, item -> {
+            SaveMap saveMap = new SaveMap();
+            saveMap.setKm(item.getKm());
+            saveMap.setDescription(item.getVicinity());
+            saveMap.setName(item.getName());
 
-                saveMap.setStar(item.getRating());
-                realm.beginTransaction();
-                realm.copyToRealm(saveMap);
-                realm.commitTransaction();
-                RestaurentFragment restaurentFragment = new RestaurentFragment();
-                restaurentFragment.setDestination(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
-                restaurentFragment.setData(item.getName(), item.getVicinity());
-                addFragmentWithTag(restaurentFragment, "RestaurentFragment");
-            }
+            saveMap.setStar(item.getRating());
+            realm.beginTransaction();
+            realm.copyToRealm(saveMap);
+            realm.commitTransaction();
+
+            RestaurentFragment restaurentFragment = new RestaurentFragment();
+            restaurentFragment.setDestination(new LatLng(item.getGeometry().getLocation().getLat(), item.getGeometry().getLocation().getLng()));
+            restaurentFragment.setData(item.getName(), item.getVicinity());
+            addFragmentWithTag(restaurentFragment, "RestaurentFragment");
         });
         rcv2.setAdapter(homeHighlightAdapter);
         rcv2.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
-        homeAdapter.notifyDataSetChanged();
         homeHighlightAdapter.notifyDataSetChanged();
 
     }
@@ -332,7 +318,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
             if (!isGPSEnabled && !isNetworkEnabled) {
-                // no network provider is enabled
+            // no network provider is enabled
             } else {
                 canGetLocation = true;
                 if (isNetworkEnabled) {
@@ -407,13 +393,12 @@ public class HomeFragment extends BaseFragment implements HomeContract.View, Loc
             double lon1 = place1.getGeometry().getLocation().getLng();
             double lat2 = place2.getGeometry().getLocation().getLat();
             double lon2 = place2.getGeometry().getLocation().getLng();
+
             double distanceToPlace1 = getDistanceBetweenTwoPoints2(currentLoc.latitude, currentLoc.longitude, lat1, lon1);
             double distanceToPlace2 = getDistanceBetweenTwoPoints2(currentLoc.latitude, currentLoc.longitude, lat2, lon2);
-            Log.d("desmcmm", (int) (distanceToPlace1 - distanceToPlace2) + "");
+
             return (int) (distanceToPlace1 - distanceToPlace2);
         }
-
-
     }
 
     public Double getDistanceBetweenTwoPoints(Double latitude1, Double longitude1, Double latitude2, Double longitude2) {
